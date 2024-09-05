@@ -25,6 +25,14 @@ public class Search {
     return -1;
   }
 
+  // Performs binary search to look for an integer in an array.
+  // Note that binary search has many interesting extensions, e.g., searching
+  // for the closest value that is before or after the search value (if it
+  // cannot be found).
+  // The implementation is relatively simple and can significantly speed up
+  // programs. I managed to speed up searching through arrays with length ~300K relatively quickly
+  // by changing a linear search implementation to binary search here:
+  // https://github.com/ChJus/SpotifyStatistics/blob/7b2611986301abc28dc088daf83c815675a4c40b/docs/index.js#L571C1-L631C2
   public static int binarySearch(int[] array, int value) {
     // NOTE: assumes the array is sorted, unpredictable behavior when
     // duplicate values are present in the array.
